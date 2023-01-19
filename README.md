@@ -16,4 +16,4 @@ Cada una de las secciones asociadas a las diferentes tecnologías se componen de
 
 ## Python
 
-[Python](/Python_Clases_y_Objetos/README.md)
+[Python](/Python_Clases_y_Objetos)
