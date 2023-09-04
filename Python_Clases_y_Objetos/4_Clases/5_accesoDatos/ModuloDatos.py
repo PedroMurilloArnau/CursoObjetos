@@ -2,8 +2,8 @@ import pandas as pd
 import numpy as np
 
 
-def cargarDatos(ruta,fichero):
-    df = pd.read_csv(ruta + fichero)
+def cargarDatos(ruta,fichero, separador =','):
+    df = pd.read_csv(ruta + fichero, sep=separador)
     return df
 
 def dameColumnas(df):
@@ -30,7 +30,8 @@ def reemplazarNulos(df,columna):
     return df
 
 def cambiaTipo(columna,tipo="float64"):
-    columna = columna.astype(tipo)
+    #columna = columna.astype(tipo)
+    columna = pd.to_numeric(columna,errors = 'coerce')
     return columna
 
 def renombrarColumna(df,cambio):
